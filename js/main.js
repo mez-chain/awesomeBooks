@@ -1,9 +1,7 @@
-let collection = JSON.parse(localStorage.getItem("collection")) || [];
+const collection = JSON.parse(localStorage.getItem("collection")) || [];
 const btnAdd = document.getElementById("addButton");
 
-btnAdd.addEventListener("click", addBook);
-
-//Show books list
+//  Show books list
 function showBooks() {
   const bookList = document.getElementById("awesomeList");
   bookList.innerHTML = "";
@@ -21,7 +19,7 @@ function showBooks() {
   });
 }
 
-//Add a new book to the collection
+//  Add a new book to the collection
 function addBook() {
   const title = document.getElementById("title").value;
   const author = document.getElementById("author").value;
@@ -38,7 +36,7 @@ function addBook() {
   }
 }
 
-//Remove a book from the collection
+//  Remove a book from the collection
 function removeBook(index) {
   collection.splice(index, 1);
 
@@ -46,5 +44,7 @@ function removeBook(index) {
 
   showBooks();
 }
+
+btnAdd.addEventListener("click", addBook);
 
 showBooks();
