@@ -14,6 +14,7 @@
     "eslint": "^7.32.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-plugin-import": "^2.29.1",
+    "eslint-plugin-react": "^7.35.0",
     "hint": "^7.1.12",
     "stylelint": "^13.13.1",
     "stylelint-config-standard": "^21.0.0",
