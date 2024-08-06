@@ -1,4 +1,3 @@
-// // Use classes
 const collection = JSON.parse(localStorage.getItem('collection')) || [];
 const btnAdd = document.getElementById('addButton');
 
@@ -7,7 +6,7 @@ class Books {
     this.title = title;
     this.author = author;
   }
-  
+
   // Add a new book
   addBook() {
     const title = document.getElementById('title').value;
