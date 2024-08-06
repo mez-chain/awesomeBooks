@@ -45,8 +45,7 @@ function showBooks() {
     const bookItem = document.createElement('div');
     bookItem.classList = 'book';
     bookItem.innerHTML = `
-    <p>${book.title}</p>
-    <p>${book.author}</p>
+    <p>"${book.title}" by ${book.author}</p>
     <button class="removeBtn" onclick="newBookInstance.removeBook(${index})">Remove</button>
     `;
 
