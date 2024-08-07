@@ -66,6 +66,7 @@ showBooks();
 function validateForm(title, author) {
   errorMsg.innerHTML = "";
   errorMsg.classList.remove("error");
+  errorMsg.classList.remove("success");
   document.getElementById('title').classList.remove("error-input");
   document.getElementById('author').classList.remove("error-input");
 
