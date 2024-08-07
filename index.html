@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <div class="bg-gray-300">
+    <div class="bg-gray-300 min-h-screen">
       <nav>
         <div
           class="nav-container px-6 flex items-center justify-between mx-auto max-w-6xl"
@@ -21,7 +21,8 @@
             <div id="list" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Collection</a>
               <div
-                class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
+                id="item-border1"
+                class="item-border mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
               ></div>
             </div>
 
@@ -29,7 +30,8 @@
             <div id="add" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Add new</a>
               <div
-                class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
+                id="item-border2"
+                class="item-border opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
               ></div>
             </div>
 
@@ -37,14 +39,15 @@
             <div id="contact" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Contact</a>
               <div
-                class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
+                id="item-border3"
+                class="item-border opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
               ></div>
             </div>
           </div>
         </div>
       </nav>
 
-      <div class="max-w-6xl mx-auto w-full bg-gray-100 min-h-screen">
+      <div class="max-w-6xl mx-auto w-full bg-gray-100 min-h-screen pb-12">
         <!-- List of books -->
         <section id="collection" class="w-full">
           <h1 class="font-bold text-4xl text-gray-700 py-10 text-center">
@@ -57,8 +60,13 @@
         </section>
 
         <!-- Add new book -->
-        <section id="addBook" class="hidden">
-          <div class="relative w-3/4 max-w-md mx-auto pt-32 flex flex-col">
+        <section
+          id="addBook"
+          class="hidden mx-auto flex justify-center items-center h-screen"
+        >
+          <div
+            class="relative w-3/4 max-w-md mx-auto p-6 flex flex-col bg-white max-w-md border-4 border-gray-600 shadow-lg shadow-gray-500"
+          >
             <h2 class="text-2xl font-bold text-gray-700 text-center mb-6">
               Add a new book
             </h2>
@@ -85,11 +93,63 @@
             <!-- error Msg -->
             <div
               id="error-msg"
-              class="absolute left-4 bottom-4 text-sm italic"
+              class="absolute left-8 bottom-10 text-sm italic"
             ></div>
           </div>
         </section>
+
+        <!-- Contact Section -->
+        <section id="contact-section" class="hidden pt-20">
+          <div
+            class="max-w-4xl mx-auto p-6 bg-white border-4 border-gray-600 shadow-lg shadow-gray-500"
+          >
+            <h2 class="text-2xl font-semibold mb-4 text-blue-600">
+              Contact Us
+            </h2>
+            <p class="mb-4">
+              We would love to hear from you! Whether you have questions,
+              feedback, or just want to say hello, feel free to reach out to us
+              using the information below:
+            </p>
+
+            <div class="space-y-4">
+              <div>
+                <h3 class="text-xl font-medium text-gray-700">Email</h3>
+                <p class="text-gray-600">contact@yourcompany.com</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-medium text-gray-700">Phone</h3>
+                <p class="text-gray-600">+1 (234) 567-8900</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-medium text-gray-700">Address</h3>
+                <p class="text-gray-600">1234 Your Street, City, Country</p>
+              </div>
+
+              <div>
+                <h3 class="text-xl font-medium text-gray-700">Follow Us</h3>
+                <p class="text-gray-600">
+                  You can also follow us on social media:
+                </p>
+                <ul class="list-disc list-inside text-gray-600">
+                  <li>Twitter: @yourcompany</li>
+                  <li>Facebook: facebook.com/yourcompany</li>
+                  <li>Instagram: @yourcompany</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
+
+      <!-- Footer -->
+      <footer class="max-w-6xl mx-auto">
+        <div class="p-6">
+          <p>&copy; 2024 Awesome. All rights reserved.</p>
+        </div>
+      </footer>
     </div>
 
     <script src="/js/main.js"></script>
