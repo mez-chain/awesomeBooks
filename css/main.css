@@ -24,3 +24,15 @@
 .removeBtn:hover {
   opacity: 0.7;
 }
+
+.error {
+  color: #f5554a;
+}
+
+.success {
+  color: green;
+}
+
+.error-input {
+  border-color: #f5554a !important;
+}
