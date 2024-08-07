@@ -100,3 +100,16 @@ document.getElementById('author').addEventListener("focus", ( ) => {
   errorMsg.classList.remove("error");
   document.getElementById('author').classList.remove("error-input");
 })
+
+// Menu navigation
+const menu = document.querySelectorAll(".menu");
+const sections = document.querySelectorAll("section");
+
+menu.forEach((ele) => {
+  ele.addEventListener("click", () => {
+    sections.forEach((sec) => {
+      sec.classList.add("hidden");
+    })
+  ele.id === "list" ? document.getElementById("collection").classList.remove("hidden") : ele.id === "add" ? document.getElementById("addBook").classList.remove("hidden") : document.getElementById("contact-section").classList.remove("hidden");
+  }) 
+})

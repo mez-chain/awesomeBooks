@@ -16,9 +16,9 @@
           <!-- Logo -->
           <img src="/images/logo.png" alt="" class="h-20" />
           <!-- Menu -->
-          <div class="flex items-center space-x-6">
+          <div id="menu" class="flex items-center space-x-6">
             <!-- Menu item 1 -->
-            <div class="flex flex-col group">
+            <div id="list" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Collection</a>
               <div
                 class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
@@ -26,7 +26,7 @@
             </div>
 
             <!-- Menu item 2 -->
-            <div class="flex flex-col group">
+            <div id="add" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Add new</a>
               <div
                 class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
@@ -34,7 +34,7 @@
             </div>
 
             <!-- Menu item 3 -->
-            <div class="flex flex-col group">
+            <div id="contact" class="menu flex flex-col group">
               <a href="#" class="text-xl text-gray-700 font-bold">Contact</a>
               <div
                 class="opacity-0 mx-3 py-1 border-b-2 border-gray-700 group-hover:opacity-100 duration-200"
@@ -43,51 +43,52 @@
           </div>
         </div>
       </nav>
-      <div
-        class="flex flex-col max-w-6xl mx-auto items-center p-12 space-y-6 w-full bg-gray-100 min-h-screen"
-      >
-        <h1 class="font-bold text-4xl text-gray-700">All awesome books</h1>
 
+      <div class="max-w-6xl mx-auto w-full bg-gray-100 min-h-screen">
         <!-- List of books -->
-        <div
-          id="awesomeList"
-          class="max-w-2xl border-4 border-gray-600 shadow-lg shadow-gray-500 w-full"
-        ></div>
-
-        <!-- Separator Container -->
-        <div class="w-1/3 max-w-xs h-1 bg-cyan-600"></div>
+        <section id="collection" class="w-full">
+          <h1 class="font-bold text-4xl text-gray-700 py-10 text-center">
+            All awesome books
+          </h1>
+          <div
+            id="awesomeList"
+            class="max-w-2xl mx-auto border-4 border-gray-600 shadow-lg shadow-gray-500 w-full"
+          ></div>
+        </section>
 
         <!-- Add new book -->
-        <div id="addBook" class="relative w-3/4 max-w-md flex flex-col">
-          <h2 class="text-2xl font-bold text-gray-700 text-center mb-6">
-            Add a new book
-          </h2>
-          <input
-            type="text"
-            id="title"
-            name="title"
-            placeholder="Title"
-            class="p-1 w-full border-2 border-gray-400"
-          />
-          <input
-            type="text"
-            id="author"
-            name="author"
-            placeholder="Author"
-            class="p-1 mt-2 w-full border-2 border-gray-400"
-          />
-          <button
-            id="addButton"
-            class="self-end px-7 py-2 mt-2 bg-cyan-600 text-white hover:opacity-70 rounded-md"
-          >
-            Add
-          </button>
-          <!-- error Msg -->
-          <div
-            id="error-msg"
-            class="absolute left-4 bottom-4 text-sm italic"
-          ></div>
-        </div>
+        <section id="addBook" class="hidden">
+          <div class="relative w-3/4 max-w-md mx-auto pt-32 flex flex-col">
+            <h2 class="text-2xl font-bold text-gray-700 text-center mb-6">
+              Add a new book
+            </h2>
+            <input
+              type="text"
+              id="title"
+              name="title"
+              placeholder="Title"
+              class="p-1 w-full border-2 border-gray-400"
+            />
+            <input
+              type="text"
+              id="author"
+              name="author"
+              placeholder="Author"
+              class="p-1 mt-2 w-full border-2 border-gray-400"
+            />
+            <button
+              id="addButton"
+              class="self-end px-7 py-2 mt-2 bg-cyan-600 text-white hover:opacity-70 rounded-md"
+            >
+              Add
+            </button>
+            <!-- error Msg -->
+            <div
+              id="error-msg"
+              class="absolute left-4 bottom-4 text-sm italic"
+            ></div>
+          </div>
+        </section>
       </div>
     </div>
 
